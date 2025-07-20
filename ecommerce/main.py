@@ -42,7 +42,7 @@ async def list_products(
     page = {
         "next": offset + limit,
         "limit": len(products),
-        "previous": offset - limit if offset - limit >= 0 else -1
+        "previous": offset - limit if offset - limit >= 0 else -10
     }
 
     return {"data": products, "page": page}
@@ -187,7 +187,7 @@ async def get_user_orders(
     page_info = {
         "next": offset + limit,
         "limit": len(orders),
-        "previous": offset - limit if offset - limit >= 0 else -1
+        "previous": offset - limit if offset - limit >= 0 else -10
     }
 
     return {
